@@ -67,8 +67,8 @@ class Product(models.Model):
     product_name = models.CharField(max_length=200)
     product_hsn = models.CharField(max_length=50, null=True, blank=True)
     product_unit = models.CharField(max_length=50)
-    product_gst_percentage = models.FloatField()
-    product_rate_with_gst = models.FloatField()
+    product_gst_percentage = models.FloatField(null=True, blank=True)
+    product_rate_with_gst = models.FloatField(null=True, blank=True)
     def __str__(self):
         return str(self.product_name)
 
